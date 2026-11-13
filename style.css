@@ -1,0 +1,320 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fbf8f4;
+    color: #302523;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #fffaf6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #9e6262;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #302523;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b97978;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 8%;
+    gap: 40px;
+    background: #f3e7e2;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tagline {
+    color: #b97978;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span,
+.about h2 span {
+    color: #b97978;
+    font-style: italic;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #756764;
+}
+
+.btn {
+    display: inline-block;
+    background: #302523;
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #b97978;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    text-align: center;
+    padding: 90px 10%;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about p:last-child {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+    color: #756764;
+}
+
+/* COLLECTION SECTION */
+
+.collections {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.collections h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.collection-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 20px #00000010;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.card p {
+    color: #756764;
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+    background: #f3e7e2;
+}
+
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddc9c2;
+    background: white;
+    font-size: 14px;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    align-self: center;
+}
+
+/* FOOTER */
+
+footer {
+    background: #302523;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h3 {
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 8px;
+    color: #d5c6c0;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fffaf6;
+        padding: 20px;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .collection-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 400px;
+    }
+
+    .about h2,
+    .collections h2 {
+        font-size: 32px;
+    }
+}
